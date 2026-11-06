@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NON EMERGENCE</title>
+</head>
+<style>
+    body{
+         text-align: center;
+      
+         max-width: 400px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            box-sizing: border-box;
+       
+       
+    }
+     button {
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+</style>
+<body>
+    
+    <h1>our service</h1><br>
+    .House hold installation(toilet,chicken,water heater,bathroom,etc).<br>
+    .tanks installation <br>
+    .pipes repairing(both private and public) <br>
+    .Fire fighting(both public and private) <br>
+    .taps and other water accessories <br>
+    .Even maintenance.
+   <marquee behavior="cycle" direction="left "> <h3>WE'RE REDY TO SERVE YOU AS YOU WISH BECOUSE YOUR HAPPNESS IS OUR REWARD </h3></marquee>
+   <form id="waForm">
+   <h4>Tag for me your adress please</h4>
+   <input type="text"id="district"placeholder="district"required> <br><br>
+   <input type="tel" id="phone" placeholder="Enter your phone number" required> <br>
+   <input type="text"id="sector"placeholder="sector"required> <br><br>
+   <input type="text"id="village"placeholder="village"required> <br><br>
+   <label>please specify your needs</label>
+   <textarea id="tell" raws="10" placeholder="tell me please" required> </textarea><br><br>
+   <button type="submit">SUBMIT </button>
+</form>
+
+<script>
+
+    const businessNumber= "25078268057000";
+
+    document.getElementById("waForm").addEventListener("submit", function (e) {
+        e.preventDefault(); 
+
+        const district = document.getElementById("district").value;
+        const phone = document.getElementById("phone").value;
+        const sector = document.getElementById("sector").value;
+        const village = document.getElementById("village").value;
+        const tell = document.getElementById("tell").value;
+
+        const text =
+        "New request from website%0A" +
+        "district: " + encodeURIComponent(district) + "%0A" +
+        "phone:" + encodeURIComponent(phone) + "%0A" + 
+        "sector: " + encodeURIComponent(sector) + "%0A" +
+        "village:" + encodeURIComponent(village) + "%0A" +
+        "tell: " + encodeURIComponent(tell);
+
+        window.open("https://wa.me/" + businessNumber + "?text=" + text, "_blank");
+    });
+</script>
+   
+
+
+
+</body>
+</html>

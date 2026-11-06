@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Service</title>
+</head>
+<style>
+body{
+         background-color: dimgray;
+         text-align: center;
+      
+         max-width: 400px;
+            margin: 40px auto;
+            padding: 0 16px; 
+            font-size: x-large;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            box-sizing: border-box;
+       
+       
+    }
+     button {
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            border-width: 2em;
+        }
+        i{
+            font-size: x-large;
+        }
+        marquee{
+            background-image: url(stock\ cake.jpg);
+        }
+</style>
+
+<body>
+   <i> <h1>Our service</h1>
+    . House hold installation (toilet, chicken, water heater, bathroom, etc).<br>
+    . Tanks installation <br>
+    . Pipes repairing (both private and public) <br>
+    . Fire fighting (both public and private) <br>
+    . Taps and other water accessories <br>
+    . Even maintenance. </i>
+
+    <marquee behavior="scroll" direction="left">
+        <h3>WE'RE READY TO SERVE YOU AS YOU WISH BECAUSE YOUR HAPPINESS IS OUR REWARD</h3>
+    </marquee>
+
+    <form id="waForm">
+        <h4>Tag for me your address please</h4>
+        <input type="text" id="district" placeholder="District" required> <br><br>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required> <br><br>
+        <input type="text" id="sector" placeholder="Sector" required> <br><br>
+        <input type="text" id="village" placeholder="Village" required> <br><br>
+        <label for="tell">Please specify your needs</label><br>
+        <textarea id="tell" rows="5" cols="30" placeholder="Tell me please" required></textarea><br><br>
+        <button type="submit">SUBMIT</button>
+    </form>
+
+    <script>
+        const myNumber = "250782680579";
+
+        document.getElementById("waForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const district = document.getElementById("district").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const sector = document.getElementById("sector").value.trim();
+            const village = document.getElementById("village").value.trim();
+            const tell = document.getElementById("tell").value.trim();
+
+            const text =
+                `*New service request*\n` +
+                `Phone: ${phone}\n` +
+                `District: ${district}\n` +
+                `Sector: ${sector}\n` +
+                `Village: ${village}\n` +
+                `Needs: ${tell}`;
+
+            const url = `https://wa.me/${myNumber}?text=${encodeURIComponent(text)}`;
+            window.open(url, "_blank");
+        });
+    </script>
+</body>
+
+</html>
