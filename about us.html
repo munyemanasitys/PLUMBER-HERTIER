@@ -1,29 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT US</title>
-    </head> 
+    <title>About Us | Plumber Hertier</title>
     <style>
-        body{
-            font-size: xx-large;
-            background-color: coral;
+        :root {
+            --teal-glow: #2ead8f;
+            --card-bg: rgba(15, 23, 42, 0.9);
+            --text-light: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, coral, #d9534f);
+            color: var(--text-light);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 850px;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.9rem 1.5rem;
+            border: 3px solid #1e293b;
+            border-radius: 16px;
+            box-shadow: 6px 6px 0px var(--teal-glow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .nav-btn:hover,
+        .nav-btn:focus {
+            border-color: var(--teal-glow);
+            transform: translate(-2px, -2px);
+            box-shadow: 9px 9px 0px var(--teal-glow);
+        }
+
+        .nav-btn.home-btn {
+            background-color: var(--teal-glow);
+            color: #0f172a;
+            box-shadow: 6px 6px 0px #000000;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #ffffff, #e2e8f0);
+            color: #0f172a;
+            border: 5px solid #000000;
+            border-radius: 24px;
+            box-shadow: 10px 10px 0px var(--teal-glow);
+            padding: 1.5rem 1rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 4.5vw, 2.3rem);
+            font-weight: 900;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border: 3px solid var(--teal-glow);
+            border-radius: 24px;
+            padding: 2.25rem 1.75rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .info-card ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.15rem;
+        }
+
+        .info-card li {
+            font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+            line-height: 1.6;
+            color: #e2e8f0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.75rem;
+        }
+
+        .info-card li strong {
+            color: #5eead4;
+        }
+
+        .thank-you {
+            font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+            font-weight: 800;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--teal-glow);
+            padding: 1.25rem;
+            border-radius: 16px;
         }
     </style>
-    <body>
-        
-   
-    <H1><i>WELCOME TO ABOUT US OR OUR INFORMATION</i></H1>
-    <Li>My name is HERTIER.<br> I have studied at KSS in A LEVEL MPC<br> I studied at IPRC IN DEGREE A'0 PLUMBING BDC <br> 
-        I have knowledg about plumbing and computer science as an adition knowledge <br> I know to use both ENGLISH AND KINYARWANDA at excelent rate and FRENCH, KISWAHILL at moderate levels.<br>
-        I have a driving licence both category A and B <br> My nationality is Rwanda <br>
-        <h1>THANK YOU SO MUCH!!!!</h1>
+</head>
 
+<body>
 
-    </Li>
+    <div class="wrapper">
+        <nav class="top-nav" aria-label="About Navigation">
+            <a href="index.html" class="nav-btn home-btn">← Home</a>
+            <a href="get help.html" class="nav-btn">Get Help</a>
+            <a href="Sityss.html" class="nav-btn">Our Service</a>
+            <a href="post.html" class="nav-btn">Post</a>
+        </nav>
 
+        <header>
+            <h1>WELCOME TO ABOUT US</h1>
+        </header>
 
-    
+        <main class="info-card">
+            <ul>
+                <li><strong>Name:</strong> Hertier</li>
+                <li><strong>High School Education:</strong> KSS (A-Level MPC - Mathematics, Physics, Computer Science)</li>
+                <li><strong>Higher Education:</strong> IPRC (Degree / Advanced Diploma in Plumbing)</li>
+                <li><strong>Additional Skills:</strong> Professional plumbing expertise combined with strong computer science knowledge.</li>
+                <li><strong>Languages:</strong> English & Kinyarwanda (Excellent) | French & Kiswahili (Moderate)</li>
+                <li><strong>Driving License:</strong> Categories A and B</li>
+                <li><strong>Nationality:</strong> Rwandan</li>
+            </ul>
+        </main>
+
+        <div class="thank-you">
+            THANK YOU SO MUCH FOR VISITING!
+        </div>
+    </div>
+
 </body>
+
 </html>
