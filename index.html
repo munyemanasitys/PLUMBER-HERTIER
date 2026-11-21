@@ -4,72 +4,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plumber Hertier</title>
+    <title>Plumber Hertier | SITYS Plumbing Services</title>
     <meta name="google-site-verification" content="TdSlxLK_J80Ssr-mZ61zqA-gXpYYWMBzthuFzL2UZRI" />
+    <style>
+        :root {
+            --bg-dark: #0f2922;
+            --bg-olive: #2f4f2f;
+            --teal-glow: #2ead8f;
+            --card-bg: rgba(15, 23, 42, 0.85);
+            --text-light: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, var(--bg-dark), var(--bg-olive));
+            color: var(--text-light);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 850px;
+        }
+
+        /* Kept your signature rounded border & teal shadow, scaled for mobile + desktop */
+        header {
+            background: linear-gradient(to bottom, #ffffff, #e2e8f0);
+            color: #0f172a;
+            border: 6px solid #000000;
+            border-radius: 28px;
+            box-shadow: 12px 12px 0px var(--teal-glow);
+            padding: 1.75rem 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-size: clamp(1.75rem, 5vw, 3rem);
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        /* Replaced broken <p> wrapper with a proper modern card container */
+        .main-card {
+            background: var(--card-bg);
+            /* If dna.jpg is in your folder, it blends cleanly with a dark overlay */
+            background-image: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.9)), url('dna.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 3px solid var(--teal-glow);
+            border-radius: 24px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            margin-bottom: 2rem;
+        }
+
+        .main-card h2 {
+            font-size: clamp(1.3rem, 3.5vw, 2rem);
+            color: #5eead4;
+            margin-bottom: 0.75rem;
+        }
+
+        .instruction {
+            font-size: 1.2rem;
+            margin-bottom: 1.75rem;
+            color: #e2e8f0;
+        }
+
+        /* Responsive grid: 1 column on phones, 2 columns on tablets/PCs */
+        .button-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        @media (min-width: 600px) {
+            .button-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Styled <a> directly as a bold, accessible button (no nested <button> needed) */
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 1.25rem 1.5rem;
+            border: 4px solid #1e293b;
+            border-radius: 16px;
+            box-shadow: 8px 8px 0px var(--teal-glow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+
+        .nav-btn:hover,
+        .nav-btn:focus {
+            background-color: #111827;
+            border-color: var(--teal-glow);
+            transform: translate(-3px, -3px);
+            box-shadow: 11px 11px 0px var(--teal-glow);
+        }
+
+        .nav-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px var(--teal-glow);
+        }
+
+        /* Replaced obsolete <marquee> with a clean, readable contact bar */
+        footer {
+            background: rgba(0, 0, 0, 0.75);
+            border: 2px solid var(--teal-glow);
+            border-radius: 16px;
+            padding: 1.25rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        footer a {
+            color: #5eead4;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<style>
-    body {
-
-        text-align: center;
-        background: linear-gradient(transparent -100%, darkolivegreen);
-
-        border-radius: 19px;
-        font-size: x-large;
-
-
-
-
-
-    }
-
-    h1 {
-        border: solid 30px black;
-        border-radius: 40px;
-        box-shadow: 40px 20px 5px rgb(46, 173, 143);
-        background: linear-gradient(transparent, white)
-    }
-
-    button {
-        background-size: 50px;
-        border-width: 30px;
-        box-shadow: 40px 20px 5px rgb(46, 173, 143);
-        border-spacing: 40em;
-        background-color: black;
-
-    }
-
-    a {
-        text-decoration: none;
-        font-size: 60px;
-        border: 30px;
-        text-align: center;
-        background-image: url(dna.jpg);
-
-        color: white;
-    }
-
-    p {
-        border: solid;
-        border-radius: 20px;
-        background-image: url(dna.jpg);
-    }
-</style>
 
 <body>
-    <h1>WELCOME TO PLUMBER SITYS!!!!!!!</h1><br><br>
-    <p>
-    <h3>WE DESERVED TO SERVE YOU!!</h3> 
-        <h3><i><b>click button🔰⬇ to get:</b></i><h3>
-    <button> <a href="get help.html">get help</a></button>
-    <button><a href="Sityss.html">our service</a></button>
-    <button><a href="post.html">post</a></button>
-    <button><a href="training.html">training</a></button>
-    </p>
-    <marquee>
-        <h5> Firstly special thanks up on you for using our webpages!!!!!! For more information you can contact us;
-            whatsap 0782680579 or email; hertierishimwe44@gmail.com</h5>
-    </marquee>
 
+    <div class="wrapper">
+        <header>
+            <h1>WELCOME TO PLUMBER SITYS!</h1>
+        </header>
+
+        <main class="main-card">
+            <h2>WE ARE PROUD TO SERVE YOU!</h2>
+            <p class="instruction"><strong>Click a button below to get started:</strong></p>
+
+            <nav class="button-grid" aria-label="Main Navigation">
+                <!-- Tip: Rename "get help.html" to "get-help.html" in your folder so links never break -->
+                <a href="get help.html" class="nav-btn">Get Help</a>
+                <a href="Sityss.html" class="nav-btn">Our Service</a>
+                <a href="post.html" class="nav-btn">Post</a>
+                <a href="training.html" class="nav-btn">Training</a>
+            </nav>
+        </main>
+
+        <footer>
+            <p>Special thanks for visiting our website! For more information, contact us:</p>
+            <p>
+                WhatsApp: <a href="https://wa.me/250782680579">0782 680 579</a> | 
+                Email: <a href="mailto:hertierishimwe44@gmail.com">hertierishimwe44@gmail.com</a>
+            </p>
+        </footer>
+    </div>
 
 </body>
 
