@@ -2,118 +2,266 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Our Service</title>
-</head>
-<style>
-body{
-         background-color: dimgray;
-         text-align: center;
-      
-         max-width: 400px;
-            margin: 40px auto;
-            padding: 0 16px; 
-            font-size: x-large;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Request | Plumber Hertier</title>
+    <style>
+        :root {
+            --bg-top: #0f2922;
+            --bg-blue: #1c6683;
+            --teal-glow: #2ead8f;
+            --card-bg: rgba(15, 23, 42, 0.9);
+            --text-light: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, var(--bg-top), var(--bg-blue));
+            color: var(--text-light);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 650px;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.8rem 1.4rem;
+            border: 3px solid #1e293b;
+            border-radius: 14px;
+            box-shadow: 5px 5px 0px var(--teal-glow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 8px 8px 0px var(--teal-glow);
+        }
+
+        .nav-btn.home-btn {
+            background-color: var(--teal-glow);
+            color: #0f172a;
+            box-shadow: 5px 5px 0px #000000;
+        }
+
+        header {
+            border: 4px solid var(--teal-glow);
+            background: linear-gradient(to bottom, #000000, #1e293b);
+            border-radius: 20px;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            color: #facc15;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            font-weight: 900;
+            letter-spacing: 0.5px;
+        }
+
+        .services-box {
+            background: var(--card-bg);
+            border: 3px solid var(--teal-glow);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .services-box h3 {
+            color: #5eead4;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .services-list {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 1.05rem;
+            color: #e2e8f0;
+        }
+
+        marquee {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid var(--teal-glow);
+            border-radius: 12px;
+            padding: 0.75rem;
+            margin-bottom: 1.75rem;
+            color: #5eead4;
+            font-weight: 700;
+        }
+
+        form {
+            background: var(--card-bg);
+            border: 3px solid var(--teal-glow);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            text-align: left;
+        }
+
+        form h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 1.25rem;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #e2e8f0;
         }
 
         input,
-        textarea,
-        button {
+        textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 12px;
-            font-size: 16px;
+            padding: 0.9rem 1rem;
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+            border-radius: 12px;
+            border: 2px solid var(--teal-glow);
+            background: #0f172a;
+            color: #ffffff;
             box-sizing: border-box;
-       
-       
-    }
-     button {
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #5eead4;
+        }
+
+        button[type="submit"] {
+            width: 100%;
             background: #25D366;
             color: white;
             border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            border-width: 2em;
-        }
-        i{
-            font-size: x-large;
-        }
-        marquee{
-            background-image: url(stock\ cake.jpg);
-        }
-      header{
+            border-radius: 12px;
+            padding: 1.1rem;
+            font-size: 1.15rem;
+            font-weight: 800;
+            text-transform: uppercase;
             
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 0em;
-  
-
-
-    position: sticky;
-    top: 0;
-    
-            
-            border: solid darkcyan 20PX;
-            background: linear-gradient(transparent 23%, black 20px);
-            border-radius: 30px;
-            border-style:groove         ;
-           
-           
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+            transition: background 0.2s ease, transform 0.1s ease;
         }
-    h1{
-        color: gold;
-    }
-</style>
+
+        button[type="submit"]:hover {
+            background: #4eee8b;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
 
 <body>
-   <i><header> <h1>Our services , your happiness</h1></header>
-    . House hold installation (toilet, chicken, water heater, bathroom, etc).<br>
-    . Tanks installation <br>
-    . Pipes repairing (both private and public) <br>
-    . Fire fighting (both public and private) <br>
-    . Taps and other water accessories <br>
-    . Even maintenance. </i>
 
-    <marquee behavior="scroll" direction="left">
-        <h3>WE'RE READY TO SERVE YOU AS YOU WISH BECAUSE YOUR HAPPINESS IS OUR REWARD</h3>
-    </marquee>
+    <div class="wrapper">
+        <nav class="top-nav" aria-label="Page Navigation">
+            <a href="index.html" class="nav-btn home-btn">← Home</a>
+            <a href="Emergence.html" class="nav-btn">Emergency</a>
+            <a href="Sityss.html" class="nav-btn">Services</a>
+            <a href="post.html" class="nav-btn">Gallery</a>
+        </nav>
 
-    <form id="waForm">
-        <h4>Tag for me your address please</h4>
-        <input type="text" id="district" placeholder="District" required> <br><br>
-        <input type="tel" id="phone" placeholder="Enter your phone number" required> <br><br>
-        <input type="text" id="sector" placeholder="Sector" required> <br><br>
-        <input type="text" id="village" placeholder="Village" required> <br><br>
-        <label for="tell">Please specify your needs</label><br>
-        <textarea id="tell" rows="5" cols="30" placeholder="Tell me please" required></textarea><br><br>
-        <button type="submit">SUBMIT</button>
-    </form>
+        <header>
+            <h1>Our services, your happiness</h1>
+        </header>
+
+        <div class="services-box">
+            <h3>What We Offer:</h3>
+            <ul class="services-list">
+                <li>✔ Household installation (toilet, kitchen, water heater, bathroom, etc.)</li>
+                <li>✔ Water tank installation</li>
+                <li>✔ Pipe repairing (both private and public)</li>
+                <li>✔ Fire fighting systems (public and private)</li>
+                <li>✔ Taps and other water accessories</li>
+                <li>✔ General maintenance & servicing</li>
+            </ul>
+        </div>
+
+        <marquee behavior="alternate" scrollamount="1">
+            WE'RE READY TO SERVE AS YOU WISH BECAUSE YOUR HAPPINESS IS OUR REWARD!
+        </marquee>
+
+        <form id="waForm">
+            <h4>Send us your address & request details:</h4>
+
+            <label for="district">District:</label>
+            <input type="text" id="district" placeholder="e.g. Gasabo / Huye" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="sector">Sector:</label>
+            <input type="text" id="sector" placeholder="Enter your sector" required>
+
+            <label for="village">Village / Cell:</label>
+            <input type="text" id="village" placeholder="Enter your village" required>
+
+            <label for="tell">Please specify your needs:</label>
+            <textarea id="tell" rows="5" placeholder="Tell us what you need installed or repaired..." required></textarea>
+
+            <button type="submit">Submit Request via WhatsApp 💬</button>
+        </form>
+    </div>
 
     <script>
-        const myNumber = "250782680579";
+        // Corrected WhatsApp business number with proper country code (Rwanda: 250)
+        const businessNumber = "250782680579";
 
         document.getElementById("waForm").addEventListener("submit", function (e) {
             e.preventDefault();
 
-            const district = document.getElementById("district").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-            const sector = document.getElementById("sector").value.trim();
-            const village = document.getElementById("village").value.trim();
-            const tell = document.getElementById("tell").value.trim();
+            const district = document.getElementById("district").value;
+            const phone = document.getElementById("phone").value;
+            const sector = document.getElementById("sector").value;
+            const village = document.getElementById("village").value;
+            const tell = document.getElementById("tell").value;
 
             const text =
-                `*New service request*\n` +
-                `Phone: ${phone}\n` +
-                `District: ${district}\n` +
-                `Sector: ${sector}\n` +
-                `Village: ${village}\n` +
-                `Needs: ${tell}`;
+                "New Service Request from Website:%0A" +
+                "District: " + encodeURIComponent(district) + "%0A" +
+                "Phone: " + encodeURIComponent(phone) + "%0A" +
+                "Sector: " + encodeURIComponent(sector) + "%0A" +
+                "Village: " + encodeURIComponent(village) + "%0A" +
+                "Details: " + encodeURIComponent(tell);
 
-            const url = `https://wa.me/${myNumber}?text=${encodeURIComponent(text)}`;
-            window.open(url, "_blank");
+            window.open("https://wa.me/" + businessNumber + "?text=" + text, "_blank");
         });
     </script>
+
 </body>
 
 </html>
