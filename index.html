@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Plumber Hertier</title>
+ <link rel="icon" type="image/jpeg" href="MINE.JPG">
 <meta name="google-site-verification" content="TdSlxLK_J80Ssr-mZ61zqA-gXpYYWMBzthuFzL2UZRI" />
 </head>
  <style>
@@ -25,7 +26,11 @@
         body {
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
             text-align: center;
-            background: linear-gradient(135deg, var(--bg-dark), var(--bg-olive));
+            /* Save your generated plumber photo in the same folder as plumber-bg.jpg */
+            background: linear-gradient(rgba(15, 41, 34, 0.45), rgba(15, 23, 42, 0.55)), url('ONLY.JPG');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
             color: var(--text-light);
             min-height: 100vh;
             padding: 2rem 1rem;
@@ -59,11 +64,8 @@
 
         /* Replaced broken <p> wrapper with a proper modern card container */
         .main-card {
-            background: var(--card-bg);
-            /* If dna.jpg is in your folder, it blends cleanly with a dark overlay */
-            background-image: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.9)), url('dna.jpg');
-            background-size: cover;
-            background-position: center;
+            background: rgba(15, 23, 42, 0.72);
+            backdrop-filter: blur(4px);
             border: 3px solid var(--teal-glow);
             border-radius: 24px;
             padding: 2rem 1.5rem;
@@ -129,7 +131,7 @@
 
         /* Replaced obsolete <marquee> with a clean, readable contact bar */
         footer {
-            background: rgba(0, 0, 0, 0.75);
+            background: rgba(0, 0, 0, 0.8);
             border: 2px solid var(--teal-glow);
             border-radius: 16px;
             padding: 1.25rem;
